@@ -1,18 +1,19 @@
 let wantApple = 4;
 let stockApple = 3;
 
-if (wantApple <= stockApple) {
-  console.log("希望通りカートに入れます。");
-} else {
-  console.log("在庫が足りません。在庫分だけカートに入れます。");
-}
-
-const appleCount = Math.min(wantApple, stockApple);
 const outputLines = [];
 const log = (message) => {
   console.log(message);
   outputLines.push(message);
 };
+
+if (wantApple <= stockApple) {
+  log("希望通りカートに入れます。");
+} else {
+  log("在庫が足りません。在庫分だけカートに入れます。");
+}
+
+const appleCount = Math.min(wantApple, stockApple);
 
 let i = 0;
 while (i < appleCount) {
