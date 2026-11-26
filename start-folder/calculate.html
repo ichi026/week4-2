@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="足し算、引き算、掛け算、割り算ができる電卓です。">
+    <title>電卓 | 私のポートフォリオ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculate.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>電卓</h1>
+      <nav aria-label="サイト内の全ページ">
+        <ul class="nav-list">
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="work.html">課題一覧</a></li>
+          <li><a href="calculate.html" aria-current="page">電卓</a></li>
+          <li><a href="JavaScriptWork/work_1_3/1_3.html">関数課題</a></li>
+          <li><a href="JavaScriptWork/work_1_4/1_4.html">基本構文課題</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="calculator-main">
+      <section class="calculator-card" aria-labelledby="calculator-heading">
+        <h2 id="calculator-heading">計算してみましょう</h2>
+        <div class="calculator-fields">
+          <label for="value1">値1</label>
+          <input id="value1" name="value1" type="number" step="any" inputmode="decimal" placeholder="数値を入力">
+
+          <label for="operator">演算子</label>
+          <select id="operator" name="operator">
+            <option value="+">足し算（＋）</option>
+            <option value="-">引き算（－）</option>
+            <option value="*">掛け算（×）</option>
+            <option value="/">割り算（÷）</option>
+          </select>
+
+          <label for="value2">値2</label>
+          <input id="value2" name="value2" type="number" step="any" inputmode="decimal" placeholder="数値を入力">
+        </div>
+        <p id="result" class="calculator-result" role="status" aria-live="polite">両方の数値を入力してください</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 私のポートフォリオ</p>
+    </footer>
+
+    <script src="JavaScript/calculate.js?v=1"></script>
+  </body>
+</html>
