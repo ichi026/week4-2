@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GitHubのユーザーや公開リポジトリを検索できます。">
+    <title>GitHub検索 | 私のポートフォリオ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/github-search.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>GitHub検索</h1>
+      <nav aria-label="サイト内の全ページ">
+        <ul class="nav-list">
+          <li><a href="../index.html">ホーム</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="work.html">課題一覧</a></li>
+          <li><a href="calculate.html">電卓</a></li>
+          <li><a href="github-search.html" aria-current="page">GitHub検索</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="github-search-main">
+      <section class="github-search-card" aria-labelledby="search-heading">
+        <h2 id="search-heading">GitHubのユーザー・リポジトリを探す</h2>
+        <p class="github-search-intro">キーワードを入力すると、GitHubで公開されているユーザーまたはリポジトリを検索します。</p>
+        <form id="github-search-form" class="github-search-form">
+          <label for="search-type">検索対象</label>
+          <select id="search-type" name="type">
+            <option value="repositories">リポジトリ</option>
+            <option value="users">ユーザー</option>
+          </select>
+          <label for="search-query">キーワード</label>
+          <div class="github-search-controls">
+            <input id="search-query" name="q" type="search" placeholder="例：javascript" required maxlength="100" autocomplete="off">
+            <button type="submit">検索</button>
+          </div>
+        </form>
+        <p id="search-status" class="search-status" role="status" aria-live="polite">検索キーワードを入力してください。</p>
+        <ul id="search-results" class="search-results" aria-label="検索結果"></ul>
+        <p class="github-search-note">検索結果はGitHubの公開情報です。GitHub APIの利用状況により、短時間に検索できる回数に制限があります。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 私のポートフォリオ</p>
+    </footer>
+    <script src="JavaScript/github-search.js?v=1"></script>
+  </body>
+</html>
