@@ -28,7 +28,7 @@
         <h2 id="calculator-heading">計算してみましょう</h2>
         <div class="calculator-fields">
           <label for="value1">値1</label>
-          <input id="value1" name="value1" type="number" step="any" inputmode="decimal" placeholder="数値を入力">
+          <input id="value1" name="value1" type="number" step="any" inputmode="decimal" value="10" placeholder="数値を入力">
 
           <label for="operator">演算子</label>
           <select id="operator" name="operator">
@@ -39,9 +39,10 @@
           </select>
 
           <label for="value2">値2</label>
-          <input id="value2" name="value2" type="number" step="any" inputmode="decimal" placeholder="数値を入力">
+          <input id="value2" name="value2" type="number" step="any" inputmode="decimal" value="2" placeholder="数値を入力">
         </div>
         <p id="result" class="calculator-result" role="status" aria-live="polite">両方の数値を入力してください</p>
+        <p class="calculator-help">値や演算子を変えると結果が自動で更新されます。入力欄を空にすると案内が表示され、値2に0を入れて割り算を選ぶとエラーメッセージに切り替わります。</p>
       </section>
     </main>
 
